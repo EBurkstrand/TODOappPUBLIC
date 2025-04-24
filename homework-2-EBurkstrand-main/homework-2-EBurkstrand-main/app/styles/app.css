@@ -1,0 +1,88 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+header {
+  text-align: center;
+  text-decoration: underline;
+  background-color: #b4f8c8;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+body {
+  background-color: #fbe7c6;
+}
+
+.todoItem {
+  background-color: #ffaebc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+}
+
+.container {
+  background-color: #a0e7e5;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.pageBox {
+  border: 3.5px solid #000; /* Creates a black border around the div */
+  padding: 15px; /* Adds space between the border and the inner content */
+  margin: 10px auto; /* Adds space outside the border and centers it */
+  max-width: 1200px; /* Optional: Sets a maximum width for the content */
+  border-radius: 10px; /* Optional: Rounds the corners of the border */
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input {
+  max-width: 1100;
+  width: 500px;
+  height: 20px;
+}
+
+.secondHeader {
+  background-color: #a0e7e5;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px;
+  font-size: xx-large;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.pageBoxS {
+  border: 3.5px solid #000; /* Creates a black border around the div */
+  padding: 15px; /* Adds space between the border and the inner content */
+  margin: 10px auto; /* Adds space outside the border and centers it */
+  max-width: 700px; /* Optional: Sets a maximum width for the content */
+  border-radius: 10px; /* Optional: Rounds the corners of the border */
+  background-color: #a0e7e5;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.todoItem2 {
+  padding-bottom: 15px;
+}
+
+.todoItem{
+  padding-bottom: 15px;
+  
+}

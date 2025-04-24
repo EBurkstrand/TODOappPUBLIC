@@ -1,0 +1,65 @@
+{{page-title "Todos"}}
+{{outlet}}
+
+<div class="pageBox">
+
+      <Input
+        type="text"
+        placeholder="New to-do"
+        @value={{this.todoText}}
+      />
+
+      <button type="button" {{on 'click' this.createTodo}}>Add</button>
+
+
+</div>
+
+
+<div class="pageBox">
+
+  <header class="subHeader">{{this.auth.user.displayName}}'s TODOS</header>
+
+  <div class="container">
+    <ul class="flexBox">
+      {{#each this.todoItems as |item|}}
+        <div class="todoItem2">
+          <LinkTo @route="todo" @model="{{item.id}}">
+            <li class="todoItem">{{truncate item.todo}}</li>
+          </LinkTo>
+          <button type="button"{{on 'click' (fn this.toggleDone item)}}>Done</button>
+        </div>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="center">
+    <button {{on 'click' this.toDone}} type="button" >See Done</button>
+  </div>
+</div>
+
+<div class="pageBox">
+
+      <Input
+        type="text"
+        placeholder="New category"
+        @value={{this.newCat}}
+      />
+
+      <button type="button" {{on 'click' this.createCat}}>Add</button>
+</div>
+
+<div class="pageBox">
+  <header class="subHeader">Categories</header>
+
+  <div class="container">
+    <ul class="flexBox">
+      {{#each this.categories as |cat|}}
+        <div class="todoItem2">
+          <LinkTo @route="todoCat" @model="{{cat}}">
+            <li class="todoItem">{{cat}}</li>
+          </LinkTo>
+        </div>
+      {{/each}}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+{{page-title "Todo"}}
+{{outlet}}
+
+<div class="pageBox" style="text-align: center;">
+  <h1 class="title">Edit To-Do</h1>
+  <div>
+    <textarea rows="5" cols="100" maxlength="500" style="resize: none;" {{on 'input' this.updateTodoText}}>{{this.todo.todo}}</textarea><br>
+    {{!-- <select name="cats" id="cats">
+      <option value="none">none</option>
+      {{#each this.cats as |cat|}}
+        <option value="{{cat}}">{{cat}}</option>
+      {{/each}}
+    </select> --}}
+    <button class="button is-primary" type="button" {{on 'click' this.saveTodoUpdate}}>Save</button>
+  </div>
+  <div>
+    <label>
+      Mark as Done
+      <input type="checkbox" checked={{this.todo.done}} {{on 'change' this.toggleDone}} />
+    </label>
+  </div>
+  <button type="button" {{on 'click' this.toTodos}}>Back to Todos</button><br>
+</div>
+

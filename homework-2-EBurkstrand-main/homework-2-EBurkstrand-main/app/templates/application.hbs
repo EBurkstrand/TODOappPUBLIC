@@ -1,0 +1,6 @@
+{{page-title "Homework2"}}
+    <header class="head" style="border: 1.5px solid #000;">
+        <div><LinkTo @route="welcome">Home</LinkTo></div><div>Evan's TO-DO App</div>
+        <div>{{#if this.auth.loggedIn}}<button type="button" {{on 'click' this.auth.logout}}>Logout</button>{{else}}<button type="button" {{on 'click' this.auth.login}}>Login</button>{{/if}}</div>
+        </header>
+{{outlet}}
